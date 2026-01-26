@@ -211,3 +211,52 @@ footer p::before, footer p::after {
     margin: 0 10px;
     font-size: 1.2rem;
 }
+/* --- STYLE DES BOUTONS DE NAVIGATION KAWAII --- */
+
+.kawaii-nav-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    font-family: 'Mochiy Pop One', cursive; /* Utilise la police mignonne */
+    font-size: 1.1rem;
+    padding: 15px 35px;
+    border-radius: 50px; /* Forme pilule très ronde */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation rebondissante */
+    display: inline-block;
+    cursor: pointer;
+    
+    /* Couleurs par défaut (Bouton rose) */
+    background-color: white;
+    color: var(--pink-pastel);
+    border: 4px solid var(--pink-pastel);
+    box-shadow: 0 6px 0 var(--pink-pastel); /* Effet 3D "sticker" */
+}
+
+/* Effet au survol (Hover) */
+.nav-btn:hover {
+    transform: scale(1.1) rotate(-2deg); /* Grossit et penche un peu */
+    background-color: var(--pink-pastel);
+    color: white;
+    box-shadow: 0 10px 0 #ff8da1;
+}
+
+/* Style pour le bouton de la page actuelle (Actif) */
+.nav-btn.active {
+    background-color: var(--blue-pastel);
+    color: white;
+    border-color: white;
+    box-shadow: 0 6px 0 #89c4c2;
+    cursor: default;
+}
+
+/* Effet clic */
+.nav-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 var(--pink-pastel);
+}
