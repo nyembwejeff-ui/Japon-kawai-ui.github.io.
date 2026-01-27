@@ -2,116 +2,63 @@
     --cyber-pink: #FF2E63;
     --cyber-blue: #08D9D6;
     --dark-bg: #1A1A2E;
-    --card-bg: rgba(255, 255, 255, 0.07);
 }
 
 body {
     background-color: var(--dark-bg);
     color: #eaeaea;
     font-family: 'Rajdhani', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
+    margin: 0; padding-bottom: 100px;
 }
 
-/* Fond étoilé discret */
 #bg-canvas {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -1;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
     background: radial-gradient(circle at center, #16213e 0%, #1a1a2e 100%);
 }
 
 .hero-header {
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 250px; display: flex; align-items: center; justify-content: center;
     background: linear-gradient(45deg, var(--cyber-pink), #8000FF);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    text-align: center;
 }
 
 h1.glitch {
-    font-family: 'Mochiy Pop One', cursive;
-    font-size: 2.5rem;
-    color: white;
-    text-shadow: 3px 3px var(--cyber-blue);
+    font-family: 'Mochiy Pop One', cursive; font-size: 2.2rem; color: white;
 }
 
-.container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: -40px auto 100px auto;
-}
+.container { max-width: 1100px; margin: -40px auto 0 auto; padding: 20px; }
 
-/* LA GRILLE : C'est ici que tout se joue */
 .subarashii-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;
 }
 
-/* STYLE DES CARTES */
 .neo-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 30px 20px;
-    position: relative;
-    backdrop-filter: blur(10px);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px; padding: 35px 20px; position: relative;
+    backdrop-filter: blur(10px); transition: 0.4s; text-align: center; cursor: pointer;
 }
 
 .neo-card:hover {
-    border-color: var(--cyber-pink);
-    transform: translateY(-10px);
-    background: rgba(255, 46, 99, 0.1);
-    box-shadow: 0 10px 30px rgba(255, 46, 99, 0.3);
+    transform: translateY(-10px); border-color: var(--cyber-pink);
+    background: rgba(255, 46, 99, 0.1); box-shadow: 0 10px 30px rgba(255, 46, 99, 0.3);
 }
 
-.card-id {
-    position: absolute;
-    top: 10px; left: 15px;
-    font-size: 0.8rem;
-    color: var(--cyber-blue);
-    font-weight: bold;
-}
+.card-id { position: absolute; top: 15px; left: 20px; color: var(--cyber-blue); font-weight: bold; font-size: 0.8rem; }
 
-.jap {
-    font-family: 'Mochiy Pop One', cursive;
-    font-size: 1.8rem;
-    color: #fff;
-    margin: 10px 0;
-    display: block;
-}
+.jap { font-family: 'Mochiy Pop One', cursive; font-size: 1.8rem; margin: 15px 0; display: block; }
 
-.romaji {
-    color: var(--cyber-pink);
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
+.romaji { color: var(--cyber-pink); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
 
-/* NAVIGATION FLOTTANTE */
 .floating-nav {
-    position: fixed;
-    bottom: 20px; left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px 20px;
-    border-radius: 50px;
-    display: flex; gap: 10px;
-    border: 1px solid var(--cyber-blue);
-    z-index: 1000;
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9); padding: 10px 20px; border-radius: 50px;
+    display: flex; gap: 10px; border: 1px solid var(--cyber-blue); z-index: 1000;
 }
 
-.nav-item {
-    color: white; text-decoration: none;
-    padding: 8px 15px; border-radius: 25px;
-    font-size: 0.8rem; transition: 0.3s;
-}
+.nav-item { color: white; text-decoration: none; padding: 8px 12px; border-radius: 20px; font-size: 0.75rem; }
+.nav-item.active { background: var(--cyber-pink); }
+
+.cyber-footer { text-align: center; padding: 40px; }
 
 .nav-item.active {
     background: var(--cyber-pink);
