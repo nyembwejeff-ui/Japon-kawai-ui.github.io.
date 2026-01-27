@@ -1,93 +1,90 @@
 :root {
-    --cyber-pink: #FF2E63;
-    --cyber-blue: #08D9D6;
-    --dark-bg: #1A1A2E;
+    --gold: #D4AF37;
+    --gold-light: #F9E29B;
+    --dark: #0A0A0A;
+    --glass: rgba(255, 255, 255, 0.03);
 }
 
 body {
-    background-color: var(--dark-bg);
-    color: #eaeaea;
-    font-family: 'Rajdhani', sans-serif;
-    margin: 0; padding-bottom: 100px;
-}
-
-#bg-canvas {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-    background: radial-gradient(circle at center, #16213e 0%, #1a1a2e 100%);
-}
-
-.hero-header {
-    height: 250px; display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(45deg, var(--cyber-pink), #8000FF);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
-
-h1.glitch {
-    font-family: 'Mochiy Pop One', cursive; font-size: 2.2rem; color: white;
-}
-
-.container { max-width: 1100px; margin: -40px auto 0 auto; padding: 20px; }
-
-.subarashii-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px;
-}
-
-.neo-card {
-    background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px; padding: 35px 20px; position: relative;
-    backdrop-filter: blur(10px); transition: 0.4s; text-align: center; cursor: pointer;
-}
-
-.neo-card:hover {
-    transform: translateY(-10px); border-color: var(--cyber-pink);
-    background: rgba(255, 46, 99, 0.1); box-shadow: 0 10px 30px rgba(255, 46, 99, 0.3);
-}
-
-.card-id { position: absolute; top: 15px; left: 20px; color: var(--cyber-blue); font-weight: bold; font-size: 0.8rem; }
-
-.jap { font-family: 'Mochiy Pop One', cursive; font-size: 1.8rem; margin: 15px 0; display: block; }
-
-.romaji { color: var(--cyber-pink); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-
-.floating-nav {
-    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.9); padding: 10px 20px; border-radius: 50px;
-    display: flex; gap: 10px; border: 1px solid var(--cyber-blue); z-index: 1000;
-}
-
-.nav-item { color: white; text-decoration: none; padding: 8px 12px; border-radius: 20px; font-size: 0.75rem; }
-.nav-item.active { background: var(--cyber-pink); }
-
-.cyber-footer { text-align: center; padding: 40px; }
-
-.nav-item.active {
-    background: var(--cyber-pink);
-    box-shadow: 0 0 15px var(--cyber-pink);
-}
-
-.cyber-footer {
-    text-align: center;
-    padding: 40px;
-    margin-top: 50px;
-}
-    gap: 15px;
-    backdrop-filter: blur(15px);
-    border: 1px solid var(--cyber-blue);
-    z-index: 100;
-}
-
-.nav-item {
+    background-color: var(--dark);
     color: #fff;
-    text-decoration: none;
-    font-size: 0.9rem;
-    padding: 8px 15px;
-    border-radius: 25px;
-    transition: 0.3s;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    overflow-x: hidden;
 }
 
-.nav-item.active {
-    background: var(--cyber-pink);
-    box-shadow: 0 0 15px var(--cyber-pink);
+.luxury-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+    background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
 }
 
+.gold-header {
+    height: 300px; display: flex; flex-direction: column; 
+    align-items: center; justify-content: center; position: relative;
+    background: linear-gradient(to bottom, #111, transparent);
+}
 
+.gold-header h1 {
+    font-family: 'Mochiy Pop One', cursive; font-size: 3rem;
+    background: linear-gradient(to right, var(--gold-light), var(--gold));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    margin: 0; letter-spacing: 2px;
+}
+
+.premium-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px; max-width: 1200px; margin: 0 auto; padding: 40px 20px;
+}
+
+.gold-card {
+    background: var(--glass); border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 0px 30px 0px 30px; padding: 40px 20px; position: relative;
+    backdrop-filter: blur(10px); transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.gold-card:hover {
+    transform: translateY(-15px); border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.badge {
+    position: absolute; top: 15px; right: 20px; color: var(--gold);
+    font-size: 0.8rem; font-weight: bold; font-family: sans-serif;
+}
+
+.gold-card h2 {
+    font-size: 1.2rem; color: #ccc; margin-bottom: 20px; font-style: italic;
+}
+
+.jap-box { margin-top: 10px; }
+
+.kanji {
+    font-family: 'Mochiy Pop One', cursive; font-size: 2rem;
+    color: white; margin: 0;
+}
+
+.phonetic {
+    color: var(--gold); text-transform: uppercase; font-size: 0.9rem;
+    letter-spacing: 3px; margin-top: 10px; font-family: sans-serif;
+}
+
+.special-gold {
+    background: linear-gradient(145deg, rgba(212, 175, 55, 0.1), transparent);
+    border: 1px solid var(--gold);
+}
+
+.premium-nav {
+    display: flex; justify-content: center; gap: 20px; padding: 50px;
+}
+
+.nav-btn {
+    text-decoration: none; color: #fff; border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 25px; border-radius: 5px; transition: 0.3s; font-size: 0.9rem;
+}
+
+.nav-btn.active, .nav-btn:hover {
+    border-color: var(--gold); color: var(--gold);
+}
+
+.gold-footer { text-align: center; padding-bottom: 40px; }
