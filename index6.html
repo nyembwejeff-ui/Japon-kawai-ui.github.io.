@@ -3,115 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌸 Nihon Mini - Émotions & Santé 🌈</title>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --heart-red: #FF6B6B;
-            --mint-green: #98FFD9;
-            --sky-blue: #87CEEB;
-            --text-dark: #2F3640;
-        }
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #F0F2F5;
-            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
-            margin: 0; display: flex; flex-direction: column; min-height: 100vh;
-        }
-        header {
-            background-color: var(--heart-red);
-            color: white; text-align: center; padding: 2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        header h1 { font-family: 'Mochiy Pop One', cursive; margin: 0; font-size: 2.5rem; }
-        .container { max-width: 960px; margin: 30px auto; padding: 0 20px; flex-grow: 1; }
-        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .kawaii-card {
-            background: white; padding: 20px; border-radius: 20px;
-            border-left: 8px solid var(--heart-red); transition: 0.3s;
-            cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .kawaii-card:hover { transform: translateX(10px); background-color: #FFF5F5; }
-        .jap { font-size: 1.3rem; font-weight: bold; color: var(--heart-red); display: block; margin-bottom: 5px; }
-        .kawaii-nav-bottom { display: flex; justify-content: center; gap: 10px; padding: 20px; flex-wrap: wrap; }
-        .nav-btn {
-            text-decoration: none; padding: 10px 15px; border-radius: 15px;
-            background: white; color: var(--heart-red); border: 2px solid var(--heart-red);
-            font-family: 'Mochiy Pop One', cursive; font-size: 0.8rem; transition: 0.3s;
-        }
-        .nav-btn.active { background: var(--heart-red); color: white; }
-        footer { text-align: center; padding: 20px; background: white; margin-top: 20px; }
-    </style>
+    <title>⚡ Nihon Mini - Kokoro Subarashii ⚡</title>
+    <link rel="stylesheet" href="japon6.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>KOKORO & KARADA 💖</h1>
-        <p>Le cœur et le corps (Cours 101-120)</p>
+    <div id="bg-canvas"></div>
+
+    <header class="hero-header">
+        <div class="header-overlay">
+            <h1 class="glitch" data-text="KOKORO & KARADA">KOKORO & KARADA 💖</h1>
+            <p>L'âme et le corps • Niveau Maître (101-120)</p>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="courses-grid">
+    <main class="container">
+        <div class="subarashii-grid">
             
-            <section class="kawaii-card">
-                <h2>101. Heureux 😊</h2>
-                <p><span class="jap">うれしい</span> (Ureshii) : **Je suis content / heureux.**</p>
+            <section class="neo-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="card-id">101</span>
+                    <h2>Heureux 😊</h2>
+                    <p class="jap">うれしい</p>
+                    <p class="romaji">Ureshii</p>
+                </div>
             </section>
 
-            <section class="kawaii-card">
-                <h2>102. Triste 😢</h2>
-                <p><span class="jap">かなしい</span> (Kanashii) : **Je suis triste.**</p>
+            <section class="neo-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="card-id">102</span>
+                    <h2>Triste 😢</h2>
+                    <p class="jap">かなしい</p>
+                    <p class="romaji">Kanashii</p>
+                </div>
             </section>
 
-            <section class="kawaii-card">
-                <h2>103. Fatigué 😴</h2>
-                <p><span class="jap">つかれました</span> (Tsukaremashita) : **Je suis fatigué.**</p>
+            <section class="neo-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="card-id">103</span>
+                    <h2>Fatigué 😴</h2>
+                    <p class="jap">つかれました</p>
+                    <p class="romaji">Tsukaremashita</p>
+                </div>
             </section>
 
-            <section class="kawaii-card">
-                <h2>104. Ça va / En forme 💪</h2>
-                <p><span class="jap">げんき です</span> (Genki desu) : **Je vais bien / J'ai la pêche.**</p>
+            <section class="neo-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="card-id">104</span>
+                    <h2>En forme 💪</h2>
+                    <p class="jap">げんき です</p>
+                    <p class="romaji">Genki desu</p>
+                </div>
             </section>
 
-            <section class="kawaii-card">
-                <h2>105. J'aime ❤️</h2>
-                <p><span class="jap">すき です</span> (Suki desu) : **J'aime / Ça me plaît.**</p>
+            <section class="neo-card special" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-content">
+                    <span class="card-id">120</span>
+                    <h2>Courage ! 🎌</h2>
+                    <p class="jap">がんばって !</p>
+                    <p class="romaji">Ganbatte!</p>
+                </div>
             </section>
 
-            <section class="kawaii-card">
-                <h2>106. Je n'aime pas 💔</h2>
-                <p><span class="jap">きらい です</span> (Kirai desu) : **Je déteste / Je n'aime pas.**</p>
-            </section>
+        </div>
+    </main>
 
-            <section class="kawaii-card">
-                <h2>107. J'ai mal ... 🤕</h2>
-                <p><span class="jap">... が いたい です</span> (... ga itai desu) : **J'ai mal à...**</p>
-            </section>
+    <nav class="floating-nav">
+        <a href="index4.html" class="nav-item">61-80</a>
+        <a href="index5.html" class="nav-item">81-100</a>
+        <a href="index6.html" class="nav-item active">101-120 🚀</a>
+        <a href="index7.html" class="nav-item">121-140</a>
+    </nav>
 
-            <section class="kawaii-card">
-                <h2>108. Mal de tête 🧠</h2>
-                <p><span class="jap">あたま が いたい</span> (Atama ga itai) : **J'ai mal à la tête.**</p>
-            </section>
+    <footer class="cyber-footer">
+        <p>Maîtrise ton destin. Page 6 complétée. ✨</p>
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnyembwejeff-ui.github.io%2FJapon-kawai-ui.github.io&count_bg=%23FF2E63&title_bg=%23252A34&title=Explorateurs" alt="Stats">
+    </footer>
 
-            <section class="kawaii-card">
-                <h2>109. Mal au ventre 🍞</h2>
-                <p><span class="jap">おなか が いたい</span> (Onaka ga itai) : **J'ai mal au ventre.**</p>
-            </section>
-
-            <section class="kawaii-card">
-                <h2>110. Fièvre 🌡️</h2>
-                <p><span class="jap">ねつ が あります</span> (Netsu ga arimasu) : **J'ai de la fièvre.**</p>
-            </section>
-
-            <section class="kawaii-card">
-                <h2>111. Amusant ✨</h2>
-                <p><span class="jap">たのしい</span> (Tanoshii) : **C'est amusant / fun.**</p>
-            </section>
-
-            <section class="kawaii-card">
-                <h2>112. Ennuyeux 💤</h2>
-                <p><span class="jap">つまらない</span> (Tsumaranai) : **C'est ennuyeux.**</p>
-            </section>
+    <script src="japon6.js"></script>
+</body>
+</html>
 
             <section class="kawaii-card">
                 <h2>113. Difficile 🔥</h2>
