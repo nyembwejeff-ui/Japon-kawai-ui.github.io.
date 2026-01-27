@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --sushi-orange: #FF7F50;
+    --rice-white: #F9F9F9;
+    --seaweed-green: #2E473B;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFE4E1;
+    background-image: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--sushi-orange);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+h2 {
+    font-family: 'Mochiy Pop One', cursive;
+    text-align: center;
+    color: var(--seaweed-green);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.kawaii-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border-bottom: 5px solid var(--sushi-orange);
+    transition: 0.3s;
+}
+
+.kawaii-card:hover { transform: scale(1.03); }
+
+.jap {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--sushi-orange);
+}
+
+.kawaii-nav-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: white;
+    color: var(--sushi-orange);
+    border: 2px solid var(--sushi-orange);
+}
+
+.nav-btn.active {
+    background: var(--sushi-orange);
+    color: white;
+}
+
+
