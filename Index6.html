@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Nihon Mini - Émotions & Santé 🌈</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --heart-red: #FF6B6B;
+            --mint-green: #98FFD9;
+            --sky-blue: #87CEEB;
+            --text-dark: #2F3640;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F0F2F5;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            margin: 0; display: flex; flex-direction: column; min-height: 100vh;
+        }
+        header {
+            background-color: var(--heart-red);
+            color: white; text-align: center; padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        header h1 { font-family: 'Mochiy Pop One', cursive; margin: 0; font-size: 2.5rem; }
+        .container { max-width: 960px; margin: 30px auto; padding: 0 20px; flex-grow: 1; }
+        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .kawaii-card {
+            background: white; padding: 20px; border-radius: 20px;
+            border-left: 8px solid var(--heart-red); transition: 0.3s;
+            cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .kawaii-card:hover { transform: translateX(10px); background-color: #FFF5F5; }
+        .jap { font-size: 1.3rem; font-weight: bold; color: var(--heart-red); display: block; margin-bottom: 5px; }
+        .kawaii-nav-bottom { display: flex; justify-content: center; gap: 10px; padding: 20px; flex-wrap: wrap; }
+        .nav-btn {
+            text-decoration: none; padding: 10px 15px; border-radius: 15px;
+            background: white; color: var(--heart-red); border: 2px solid var(--heart-red);
+            font-family: 'Mochiy Pop One', cursive; font-size: 0.8rem; transition: 0.3s;
+        }
+        .nav-btn.active { background: var(--heart-red); color: white; }
+        footer { text-align: center; padding: 20px; background: white; margin-top: 20px; }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1>KOKORO & KARADA 💖</h1>
+        <p>Le cœur et le corps (Cours 101-120)</p>
+    </header>
+
+    <div class="container">
+        <div class="courses-grid">
+            
+            <section class="kawaii-card">
+                <h2>101. Heureux 😊</h2>
+                <p><span class="jap">うれしい</span> (Ureshii) : **Je suis content / heureux.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>102. Triste 😢</h2>
+                <p><span class="jap">かなしい</span> (Kanashii) : **Je suis triste.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>103. Fatigué 😴</h2>
+                <p><span class="jap">つかれました</span> (Tsukaremashita) : **Je suis fatigué.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>104. Ça va / En forme 💪</h2>
+                <p><span class="jap">げんき です</span> (Genki desu) : **Je vais bien / J'ai la pêche.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>105. J'aime ❤️</h2>
+                <p><span class="jap">すき です</span> (Suki desu) : **J'aime / Ça me plaît.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>106. Je n'aime pas 💔</h2>
+                <p><span class="jap">きらい です</span> (Kirai desu) : **Je déteste / Je n'aime pas.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>107. J'ai mal ... 🤕</h2>
+                <p><span class="jap">... が いたい です</span> (... ga itai desu) : **J'ai mal à...**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>108. Mal de tête 🧠</h2>
+                <p><span class="jap">あたま が いたい</span> (Atama ga itai) : **J'ai mal à la tête.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>109. Mal au ventre 🍞</h2>
+                <p><span class="jap">おなか が いたい</span> (Onaka ga itai) : **J'ai mal au ventre.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>110. Fièvre 🌡️</h2>
+                <p><span class="jap">ねつ が あります</span> (Netsu ga arimasu) : **J'ai de la fièvre.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>111. Amusant ✨</h2>
+                <p><span class="jap">たのしい</span> (Tanoshii) : **C'est amusant / fun.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>112. Ennuyeux 💤</h2>
+                <p><span class="jap">つまらない</span> (Tsumaranai) : **C'est ennuyeux.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>113. Difficile 🔥</h2>
+                <p><span class="jap">むずかしい</span> (Mushukashii) : **C'est difficile.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>114. Facile ✅</h2>
+                <p><span class="jap">やさしい</span> (Yasashii) : **C'est facile.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>115. Peur 😨</h2>
+                <p><span class="jap">こわい</span> (Kowai) : **J'ai peur / C'est effrayant.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>116. Étonnant 😲</h2>
+                <p><span class="jap">びっくり した</span> (Bikkuri shita) : **J'ai été surpris !**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>117. En colère 💢</h2>
+                <p><span class="jap">おこっています</span> (Okotte imasu) : **Je suis en colère.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>118. Stressé 🌀</h2>
+                <p><span class="jap">きんちょう しています</span> (Kinchou shiteimasu) : **Je suis nerveux / stressé.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>119. Prends soin de toi 💊</h2>
+                <p><span class="jap">おだいじに</span> (Odaijini) : **Soigne-toi bien.**</p>
+            </section>
+
+            <section class="kawaii-card">
+                <h2>120. Courage ! 🎌</h2>
+                <p><span class="jap">がんばって !</span> (Ganbatte!) : **Fais de ton mieux !**</p>
+            </section>
+
+        </div>
+    </div>
+
+    <nav class="kawaii-nav-bottom">
+        <a href="index.html" class="nav-btn">1-20</a>
+        <a href="index2.html" class="nav-btn">21-40</a>
+        <a href="index3.html" class="nav-btn">41-60</a>
+        <a href="index4.html" class="nav-btn">61-80</a>
+        <a href="index5.html" class="nav-btn">81-100</a>
+        <a href="index6.html" class="nav-btn active">101-120</a>
+    </nav>
+
+    <footer>
+        <p>Page 6 - Kokoro (Le Cœur) 💕</p>
+        <div style="margin-top: 15px;">
+            <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fnyembwejeff-ui.github.io%2FJapon-kawai-ui.github.io&count_bg=%23FF6B6B&title_bg=%234A4A4A&icon=&icon_color=%23E7E7E7&title=Apprenants&edge_flat=false" alt="Compteur"/>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.kawaii-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.style.transform = "scale(0.95)";
+                setTimeout(() => card.style.transform = "scale(1)", 150);
+            });
+        });
+    </script>
+</body>
+  </html>
+  
