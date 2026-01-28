@@ -1,0 +1,86 @@
+body {
+    background-color: #f7fffb; /* Teinte menthe très légère */
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.simple-header {
+    text-align: center;
+    padding: 30px;
+    color: #48bfa3;
+}
+
+.simple-header h1 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.chat-box {
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bubble-wrap { width: 100%; display: flex; }
+
+.bubble {
+    padding: 15px;
+    border-radius: 20px;
+    max-width: 80%;
+    animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.left {
+    background-color: #e0f2f1;
+    color: #00796b;
+    border-bottom-left-radius: 2px;
+}
+
+.right {
+    background-color: #fce4ec;
+    color: #c2185b;
+    border-bottom-right-radius: 2px;
+    margin-left: auto;
+}
+
+.jap { font-family: 'Mochiy Pop One', sans-serif; font-size: 1.1rem; display: block; }
+.romaji { font-weight: bold; font-size: 0.8rem; margin: 5px 0; text-transform: uppercase; color: #555; }
+.fr { font-size: 0.85rem; opacity: 0.8; margin: 0; }
+
+.controls { margin: 30px 0; }
+
+.kawaii-btn {
+    background-color: #48bfa3;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #369c84;
+}
+
+.kawaii-btn:active { transform: translateY(4px); box-shadow: none; }
+
+.simple-nav {
+    position: fixed;
+    bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.simple-nav a { text-decoration: none; color: #48bfa3; font-weight: bold; font-size: 0.9rem; }
+.next-page { background: #48bfa3; color: white !important; padding: 5px 15px; border-radius: 20px; }
+
+@keyframes pop {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
