@@ -1,262 +1,80 @@
-/* Import de polices kawaii */
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Open+Sans:wght@400;700&display=swap');
-
-/* Variables pour les couleurs pastel */
 :root {
-    --pink-pastel: #FFC0CB; /* Rose Mignon */
-    --blue-pastel: #A7DBD8; /* Bleu Ciel Doux */
-    --yellow-pastel: #F8EDD3; /* Jaune Pâle */
-    --green-pastel: #CFFFE5; /* Vert Menthe */
-    --purple-pastel: #D8BFD8; /* Lavande */
-    --text-dark: #4A4A4A;
-    --text-light: #FFFFFF;
-    --shadow-soft: 0 4px 8px rgba(0,0,0,0.1);
+    --pink: #FF8DA1;
+    --blue: #89C4C2;
+    --yellow: #FDFD96;
+    --white: #ffffff;
 }
 
 body {
+    background: #fdf6f7;
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--blue-pastel);
-    background-image: url('https://www.transparenttextures.com/patterns/little-pluses.png'); /* Texture de fond mignonne */
-    color: var(--text-dark);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Pour que le footer reste en bas */
+    margin: 0; padding-bottom: 90px;
+    color: #333;
 }
 
 header {
-    background-color: var(--pink-pastel);
-    color: var(--text-light);
+    background: var(--pink);
+    padding: 25px; text-align: center;
+    color: white; border-bottom: 6px solid rgba(0,0,0,0.1);
+}
+
+header h1 { font-family: 'Mochiy Pop One'; margin: 0; letter-spacing: 2px; }
+
+/* Intro Guide Jeff-san */
+.jeff-guide {
+    display: flex; justify-content: center; padding: 25px 15px;
+}
+
+.guide-card {
+    background: var(--white); border-radius: 25px;
+    padding: 20px; display: flex; align-items: center;
+    gap: 20px; border: 4px solid var(--blue);
+    box-shadow: 10px 10px 0px var(--blue);
+    max-width: 650px;
+}
+
+.jeff-pic {
+    width: 90px; height: 90px; border-radius: 50%;
+    border: 4px solid var(--pink); object-fit: cover;
+}
+
+.guide-bubble h2 { margin: 0; color: var(--pink); font-size: 1.3rem; font-family: 'Mochiy Pop One'; }
+.guide-bubble p { margin: 8px 0 0; font-size: 0.95rem; line-height: 1.4; font-weight: 600; }
+
+/* Grid leçons */
+.container { padding: 10px; max-width: 1100px; margin: auto; }
+.section-title { text-align: center; font-family: 'Mochiy Pop One'; color: var(--blue); margin: 30px 0; }
+
+.lesson-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;
+}
+
+.lesson-card {
+    background: var(--white); padding: 30px 20px; border-radius: 20px;
+    position: relative; border: 2px solid #eee;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
-    padding: 2rem 1rem;
-    box-shadow: var(--shadow-soft);
-    position: relative;
 }
 
-header h1 {
-    font-family: 'Mochiy Pop One', cursive; /* Police de titre kawaii */
-    font-size: 3.5rem;
-    margin: 0.5rem 0;
-    color: white; /* Texte blanc sur fond rose */
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+.lesson-card:hover { transform: translateY(-8px); border-color: var(--pink); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+.lesson-num {
+    position: absolute; top: -15px; left: -15px;
+    background: var(--yellow); width: 45px; height: 45px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold; border-radius: 50%; border: 3px solid #333;
 }
 
-header p {
-    font-size: 1.2rem;
-    color: white;
+.kanji { font-size: 2rem; color: #d63384; font-weight: bold; margin: 15px 0 5px; }
+.romaji { font-style: italic; color: #555; font-size: 1.1rem; margin-bottom: 15px; }
+.desc { font-size: 0.85rem; color: #777; border-top: 1px dashed #ddd; padding-top: 10px; line-height: 1.4; }
+
+/* Navbar Bottom */
+.kawaii-nav {
+    position: fixed; bottom: 0; width: 100%;
+    background: var(--white); display: flex; justify-content: space-around;
+    padding: 15px 0; border-top: 4px solid var(--pink); z-index: 100;
 }
 
-.sushi-logo {
-    width: 60px;
-    height: auto;
-    vertical-align: middle;
-    margin: 0 10px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.container {
-    max-width: 960px;
-    margin: 30px auto;
-    padding: 0 20px;
-    flex-grow: 1; /* Permet au container de prendre l'espace disponible */
-}
-
-h2 {
-    font-family: 'Mochiy Pop One', cursive;
-    color: var(--text-dark);
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 2.2rem;
-    background-color: var(--yellow-pastel);
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: var(--shadow-soft);
-    display: inline-block;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.kawaii-card {
-    background-color: var(--yellow-pastel); /* Couleur de base pour les cartes */
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: var(--shadow-soft);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    border: 3px solid rgba(255, 255, 255, 0.5); /* Bordure interne subtile */
-    min-height: 120px; /* Hauteur minimale pour l'homogénéité */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.kawaii-card:nth-child(even) { /* Alterner les couleurs */
-    background-color: var(--green-pastel);
-}
-.kawaii-card:nth-child(3n+1) {
-    background-color: var(--pink-pastel);
-    color: var(--text-light); /* Texte clair sur fond rose */
-}
-.kawaii-card:nth-child(4n+2) {
-    background-color: var(--blue-pastel);
-    color: var(--text-light); /* Texte clair sur fond bleu */
-}
-
-.kawaii-card h2 {
-    font-family: 'Mochiy Pop One', cursive;
-    font-size: 1.5rem;
-    color: var(--text-dark);
-    margin-top: 0;
-    margin-bottom: 10px;
-    border-bottom: none; /* Supprimer la bordure de titre dans la carte */
-    padding-bottom: 0;
-    text-align: left;
-    background-color: transparent; /* Supprimer le fond des titres de carte */
-    box-shadow: none;
-    color: inherit; /* Utiliser la couleur de texte de la carte parente */
-}
-
-.kawaii-card p {
-    font-size: 1.1rem;
-    color: inherit; /* Utiliser la couleur de texte de la carte parente */
-}
-
-.kawaii-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
-
-.jap {
-    font-weight: bold;
-    color: inherit; /* Utiliser la couleur de texte de la carte parente */
-}
-
-/* Style spécifique pour le mot du jour */
-.mot-du-jour {
-    background-color: var(--pink-pastel);
-    color: var(--text-light);
-    text-align: center;
-    padding: 30px;
-    margin-bottom: 40px;
-    border: 5px dashed white; /* Bordure mignonne */
-    box-shadow: var(--shadow-soft);
-}
-
-.mot-du-jour h2 {
-    color: var(--text-light);
-    margin-bottom: 15px;
-    background-color: transparent;
-    box-shadow: none;
-    border-radius: 0;
-}
-
-.mot-du-jour p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.mot-du-jour button {
-    background-color: white;
-    color: var(--pink-pastel);
-    border: none;
-    padding: 12px 25px;
-    border-radius: 50px; /* Bouton rond */
-    font-family: 'Mochiy Pop One', cursive;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 15px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.mot-du-jour button:hover {
-    background-color: #ffe0e6;
-    transform: translateY(-3px);
-}
-
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: var(--text-dark);
-    font-size: 1rem;
-    margin-top: 40px;
-}
-
-footer p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer p::before, footer p::after {
-    content: '💕';
-    margin: 0 10px;
-    font-size: 1.2rem;
-}
-/* --- STYLE DES BOUTONS DE NAVIGATION KAWAII --- */
-
-.kawaii-nav-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 50px 0;
-    padding: 20px;
-}
-
-.nav-btn {
-    text-decoration: none;
-    font-family: 'Mochiy Pop One', cursive; /* Utilise la police mignonne */
-    font-size: 1.1rem;
-    padding: 15px 35px;
-    border-radius: 50px; /* Forme pilule très ronde */
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation rebondissante */
-    display: inline-block;
-    cursor: pointer;
-    
-    /* Couleurs par défaut (Bouton rose) */
-    background-color: white;
-    color: var(--pink-pastel);
-    border: 4px solid var(--pink-pastel);
-    box-shadow: 0 6px 0 var(--pink-pastel); /* Effet 3D "sticker" */
-}
-
-/* Effet au survol (Hover) */
-.nav-btn:hover {
-    transform: scale(1.1) rotate(-2deg); /* Grossit et penche un peu */
-    background-color: var(--pink-pastel);
-    color: white;
-    box-shadow: 0 10px 0 #ff8da1;
-}
-
-/* Style pour le bouton de la page actuelle (Actif) */
-.nav-btn.active {
-    background-color: var(--blue-pastel);
-    color: white;
-    border-color: white;
-    box-shadow: 0 6px 0 #89c4c2;
-    cursor: default;
-}
-
-/* Effet clic */
-.nav-btn:active {
-    transform: translateY(4px);
-    box-shadow: 0 2px 0 var(--pink-pastel);
-}
+.kawaii-nav a { text-decoration: none; color: var(--pink); font-weight: bold; font-size: 0.9rem; }
+.kawaii-nav a.active { color: var(--blue); border-bottom: 2px solid var(--blue); }
