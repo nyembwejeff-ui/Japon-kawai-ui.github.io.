@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Le Grand Quiz Nihon Mini 🌸</title>
+    <link rel="stylesheet" href="japon12.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="quiz-header">
+        <h1>🏆 EXAMEN FINAL 🏆</h1>
+        <p>Montre ce que tu as appris depuis le début !</p>
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="quiz-box" class="kawaii-card">
+            <h2 id="question-number">Question 1/5</h2>
+            <p id="question-text">Chargement...</p>
+            
+            <div id="options-container" class="options-grid">
+                </div>
+
+            <div id="feedback" class="feedback hidden"></div>
+        </div>
+
+        <div id="result-box" class="kawaii-card hidden">
+            <h2>🎉 Score Final : <span id="final-score">0</span>/5</h2>
+            <p id="result-message"></p>
+            <button onclick="location.reload()" class="retry-btn">Recommencer 🔄</button>
+            <br><br>
+            <a href="index13.html" class="next-btn">Page 13 : La Suite ! ➔</a>
+        </div>
+    </main>
+
+    <script src="japon12.js"></script>
+</body>
+</html>

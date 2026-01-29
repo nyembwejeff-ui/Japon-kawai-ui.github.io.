@@ -1,0 +1,50 @@
+body {
+    background: linear-gradient(135deg, #fff5f5 0%, #f0f4ff 100%);
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0; padding: 20px;
+    min-height: 100vh;
+}
+
+.final-header { text-align: center; margin-bottom: 30px; }
+.badge { 
+    background: #ff6b6b; color: white; display: inline-block; 
+    padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; margin-bottom: 10px;
+}
+h1 { font-family: 'Mochiy Pop One', sans-serif; color: #2d3436; }
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 30px; padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 2px solid white; text-align: center;
+}
+
+.options-stack { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+
+.opt-btn {
+    background: white; border: 2px solid #eee; padding: 15px;
+    border-radius: 20px; cursor: pointer; font-size: 1rem;
+    transition: 0.3s; font-weight: 600;
+}
+.opt-btn:hover { border-color: #ff6b6b; background: #fff5f5; }
+
+.hidden { display: none; }
+
+/* Styles Victoire */
+.celebration { font-family: 'Mochiy Pop One', sans-serif; font-size: 1.5rem; color: #ff6b6b; margin-bottom: 20px; }
+.japan-preview { 
+    border-radius: 20px; overflow: hidden; background: white; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 20px 0;
+}
+.japan-preview img { width: 100%; height: 150px; object-fit: cover; }
+.preview-text { padding: 15px; }
+
+.explore-btn {
+    display: block; background: #2d3436; color: white;
+    text-decoration: none; padding: 15px; border-radius: 50px;
+    font-weight: bold; margin-top: 20px; transition: 0.3s;
+}
+.explore-btn:hover { background: #ff6b6b; transform: scale(1.05); }
+
+

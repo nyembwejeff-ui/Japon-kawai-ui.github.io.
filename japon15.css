@@ -1,0 +1,75 @@
+:root {
+    --jp-red: #d63031;
+    --dark: #2d3436;
+    --glass: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    margin: 0; padding-bottom: 80px;
+    font-family: 'Rajdhani', sans-serif;
+    background: #f0f2f5; color: var(--dark);
+}
+
+/* Hero Section avec Image */
+.hero-section {
+    height: 40vh;
+    background: url('https://images.unsplash.com/photo-1492571350019-22de08371fd3?auto=format&fit=crop&w=1000') center/cover;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    color: white; text-align: center;
+}
+
+.overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+
+.hero-content { z-index: 1; }
+.jp-text { font-family: 'Mochiy Pop One'; font-size: 1.2rem; display: block; margin-bottom: 10px; }
+h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+
+/* Fact Cards */
+.quick-facts {
+    display: flex; gap: 15px; padding: 20px;
+    max-width: 800px; margin: -40px auto 0; position: relative; z-index: 2;
+}
+
+.fact-card {
+    flex: 1; background: white; border-radius: 20px;
+    overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center; padding-bottom: 15px;
+}
+
+.fact-card img { width: 100%; height: 100px; object-fit: cover; }
+.fact-card h3 { font-size: 0.9rem; color: var(--jp-red); margin: 10px 0 5px; }
+
+/* Préfectures Accordion */
+.prefectures-explorer { padding: 20px; max-width: 800px; margin: auto; }
+.region-block { margin-bottom: 15px; background: var(--glass); border-radius: 15px; overflow: hidden; }
+
+.region-header {
+    background: white; padding: 15px 20px; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    font-weight: 700; font-size: 1.1rem; border-bottom: 2px solid #eee;
+}
+
+.region-header:hover { background: #fdfdfd; color: var(--jp-red); }
+
+.pref-list { 
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px; padding: 15px; display: none; /* Caché par défaut */
+}
+
+.pref-item { 
+    background: #fff; padding: 8px; border-radius: 8px; 
+    font-size: 0.85rem; border: 1px solid #ddd; text-align: center;
+}
+
+/* Navigation */
+.footer-nav {
+    position: fixed; bottom: 0; width: 100%; background: white;
+    padding: 15px; display: flex; justify-content: center; gap: 30px;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+}
+.nav-btn { text-decoration: none; color: var(--dark); font-weight: 700; }
+.nav-btn.next { color: var(--jp-red); }

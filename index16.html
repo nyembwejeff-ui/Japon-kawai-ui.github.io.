@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⛩️ Destinations Iconiques - Page 16</title>
+    <link rel="stylesheet" href="japon16.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="travel-header">
+        <h1>LES SYMBOLES DU JAPON</h1>
+        <p>Trois lieux magiques à visiter absolument</p>
+    </header>
+
+    <main class="grid-container">
+        <div class="travel-card" onclick="showInfo('fuji')">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1490806678282-484c3765e177?auto=format&fit=crop&w=500');"></div>
+            <div class="card-content">
+                <span class="tag">Nature</span>
+                <h3>Le Mont Fuji</h3>
+                <p>Le symbole sacré du Japon, haut de 3 776 mètres.</p>
+            </div>
+        </div>
+
+        <div class="travel-card" onclick="showInfo('kyoto')">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=500');"></div>
+            <div class="card-content">
+                <span class="tag">Tradition</span>
+                <h3>Kyoto</h3>
+                <p>La cité des 2000 temples et des geishas.</p>
+            </div>
+        </div>
+
+        <div class="travel-card" onclick="showInfo('shibuya')">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=format&fit=crop&w=500');"></div>
+            <div class="card-content">
+                <span class="tag">Modernité</span>
+                <h3>Shibuya</h3>
+                <p>Le carrefour le plus célèbre au monde.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="infoOverlay" class="overlay hidden">
+        <div class="modal">
+            <span class="close" onclick="closeInfo()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+        </div>
+    </div>
+
+    <nav class="footer-nav">
+        <a href="index15.html" class="nav-btn">⬅ Retour</a>
+        <a href="index17.html" class="nav-btn next">Page 17 ➔</a>
+    </nav>
+
+    <script src="japon16.js"></script>
+</body>
+</html>

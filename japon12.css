@@ -1,0 +1,40 @@
+body {
+    background-color: #fdf6ff;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0; padding: 20px;
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.quiz-header { text-align: center; color: #a855f7; margin-bottom: 20px; width: 100%; }
+.quiz-header h1 { font-family: 'Mochiy Pop One', sans-serif; }
+
+/* Barre de progression */
+.progress-container { width: 80%; max-width: 400px; height: 10px; background: #e9d5ff; border-radius: 10px; margin: 10px auto; overflow: hidden; }
+#progress-bar { width: 0%; height: 100%; background: #a855f7; transition: 0.3s; }
+
+.kawaii-card {
+    background: white; border-radius: 25px; padding: 25px;
+    box-shadow: 0 8px 0 #d8b4fe; border: 3px solid #d8b4fe;
+    width: 90%; max-width: 450px; text-align: center;
+}
+
+.options-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+
+.opt-btn {
+    background: #faf5ff; border: 2px solid #d8b4fe; padding: 15px;
+    border-radius: 15px; cursor: pointer; font-weight: bold; transition: 0.2s;
+}
+.opt-btn:hover { background: #f3e8ff; transform: scale(1.02); }
+
+.feedback { margin-top: 15px; padding: 10px; border-radius: 10px; font-weight: bold; }
+.correct { background: #d1fae5; color: #065f46; }
+.wrong { background: #fee2e2; color: #991b1b; }
+
+.hidden { display: none; }
+
+.next-btn, .retry-btn {
+    display: inline-block; padding: 12px 25px; border-radius: 50px;
+    text-decoration: none; font-weight: bold; cursor: pointer; border: none;
+}
+.next-btn { background: #a855f7; color: white; }
+.retry-btn { background: #cbd5e0; color: #4a5568; }

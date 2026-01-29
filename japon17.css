@@ -1,0 +1,63 @@
+body {
+    background-color: #050505;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0; padding-bottom: 90px;
+}
+
+.wtf-header {
+    padding: 30px 10px;
+    background: linear-gradient(to bottom, #111, #050505);
+    border-bottom: 3px solid #00f2ff;
+}
+
+.wtf-header h1 {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 1.8rem;
+    color: #00f2ff;
+    text-shadow: 0 0 15px #00f2ff;
+    margin: 0;
+}
+
+.grid-10 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 12px;
+    padding: 15px;
+}
+
+.card {
+    background: #111;
+    border-radius: 12px;
+    padding: 15px 5px;
+    border: 2px solid #333;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.card:active { transform: scale(0.95); }
+
+.icon { font-size: 2rem; margin-bottom: 5px; }
+h3 { margin: 5px 0; font-size: 1rem; color: #fff; }
+p { margin: 0; font-size: 0.75rem; color: #aaa; }
+
+/* Couleurs des bordures néon */
+.c-blue { border-color: #00f2ff; box-shadow: 0 0 8px #00f2ff; }
+.c-pink { border-color: #ff00ff; box-shadow: 0 0 8px #ff00ff; }
+.c-green { border-color: #39ff14; box-shadow: 0 0 8px #39ff14; }
+.c-yellow { border-color: #feff00; box-shadow: 0 0 8px #feff00; }
+.c-purple { border-color: #bc13fe; box-shadow: 0 0 8px #bc13fe; }
+.c-red { border-color: #ff073a; box-shadow: 0 0 8px #ff073a; }
+.c-cyan { border-color: #0ff; box-shadow: 0 0 8px #0ff; }
+.c-orange { border-color: #ff8c00; box-shadow: 0 0 8px #ff8c00; }
+.c-white { border-color: #fff; box-shadow: 0 0 8px #fff; }
+
+.footer-nav {
+    position: fixed; bottom: 0; width: 100%;
+    background: #111; padding: 15px 0;
+    display: flex; justify-content: space-around;
+    border-top: 1px solid #333;
+}
+
+.nav-btn { color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+.next { color: #ff00ff; }
